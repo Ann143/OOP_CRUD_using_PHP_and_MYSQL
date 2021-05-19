@@ -10,7 +10,7 @@
     <title>Retrieve from DB</title>
     <style>
   body{
-      background-image: url("retrieveBg.png");
+      background-image: url("imgs/retrieveBg.png");
       background-repeat: no-repeat;
       background-size: cover;
       

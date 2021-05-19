@@ -11,7 +11,7 @@
 
   <style>
   body{
-      background-image: url("bg.png");
+      background-image: url("imgs/bg.png");
       background-repeat: no-repeat;
       background-size: cover;
       
@@ -32,7 +32,7 @@
    <br><br>
 
    <div class="card" style="width: 20rem;margin-left:540px; box-shadow: 0 6px 10px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(3, 0, 0, 0.19);">
-  <img src="student.png" class="card-img-top" alt="...">
+  <img src="imgs/student.png" class="card-img-top" alt="...">
   <div class="card-body">
    
   <form action=""  method="post" >
