@@ -19,8 +19,8 @@
   </style>
 </head>
 <body>
-<br>
-<h3 style="margin-left:580px;">Retrieve Data From DB</h3>
+<br><br><br>
+
     <?php
         $crud = new crudoop();
 
@@ -30,8 +30,13 @@
     ?>
 
    <br><br>
-<form action=""  method="post" style="margin-left:410px">
-  <div class="form-row align-items-center">
+
+   <div class="card" style="width: 20rem;margin-left:540px; box-shadow: 0 6px 10px 0 rgba(8, 8, 8, 0.2), 0 6px 20px 0 rgba(3, 0, 0, 0.19);">
+  <img src="student.png" class="card-img-top" alt="...">
+  <div class="card-body">
+   
+  <form action=""  method="post" >
+  <div class="form-group">
   <label class="sr-only" for="inlineFormInputGroup">Name</label>
     <div class="col-auto">
       <div class="input-group mb-2">
@@ -41,7 +46,9 @@
         <input type="text" class="form-control" name="studName" placeholder="Name">
       </div>
     </div>
-    <label class="sr-only" for="inlineFormInputGroup">Course</label>
+  </div>
+  <div class="form-group">
+  <label class="sr-only" for="inlineFormInputGroup">Course</label>
     <div class="col-auto">
       <div class="input-group mb-2">
         <div class="input-group-prepend">
@@ -50,55 +57,13 @@
         <input type="text" class="form-control" name="studCourse" placeholder="Course">
       </div>
     </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-outline-danger mb-2" name="submit">Submit</button>
-    </div>
   </div>
+  <button type="submit" class="btn btn-outline-danger mb-2" name="submit" style="width:100%">Submit</button>
 </form>
 
-<div class="container" style="width:50%;">
-        <?php
-           if (isset($_GET['msg1']) == "insert") {
-            echo "<div class='alert alert-success alert-dismissible'>
-                    <button type='button' class='close' data-dismiss='alert'>&times;</button>
-                    Your Registration Added Successfully!
-                  </div>";
-            } 
-        ?>
+  </div>
 </div>
 
 
-    <br><br>
-    <div class="container">
-   <table class="table table-hover" style="text-align:center">
-    <thead style="background:#e6176a;color:white">
-        <tr>
-        <th>Name</th>
-        <th>Course</th>
-        <th>Action</th>
-        </tr>
-   </thead>
-   <tbody>
-        <?php
-
-            $persons = $crud->displayData();
-
-            foreach ($persons as $person) {
-            ?> 
-            <tr>
-            <td><?php echo $person['name'] ?></td>
-            <td><?php echo $person['course'] ?></td>
-            <td>
-            <a href="edit.php?editId=<?php echo $person['personId'] ?>" style="color:green">
-              <i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp
-            <a href="index.php?deleteId=<?php echo $person['personId'] ?>" style="color:red" onclick="confirm('Are you sure want to delete this record')">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-            </td>
-            </tr>
-            <?php } ?>
-    
-         </tbody>
-    </table>
-</div>
 </body>
 </html>

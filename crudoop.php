@@ -20,7 +20,7 @@ class crudoop{
       $dbconn = $this->conn;
       mysqli_query($dbconn,$sql) or die(mysqli_error($dbconn)); 
       if ($dbconn==true) {
-        header("Location:index.php?msg1=insert");
+        header("Location:retrieve.php?msg1=insert");
     }else{
         echo "Registration failed try again!";
     }
