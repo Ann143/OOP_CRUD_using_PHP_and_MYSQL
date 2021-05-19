@@ -37,7 +37,7 @@
    
   <form action=""  method="post" >
   <div class="form-group">
-  <label class="sr-only" for="inlineFormInputGroup">Name</label>
+  <label style="margin-left:14px;">Name</label>
     <div class="col-auto">
       <div class="input-group mb-2">
         <div class="input-group-prepend">
@@ -47,8 +47,9 @@
       </div>
     </div>
   </div>
+  
   <div class="form-group">
-  <label class="sr-only" for="inlineFormInputGroup">Course</label>
+  <label style="margin-left:14px;">Course</label>
     <div class="col-auto">
       <div class="input-group mb-2">
         <div class="input-group-prepend">
